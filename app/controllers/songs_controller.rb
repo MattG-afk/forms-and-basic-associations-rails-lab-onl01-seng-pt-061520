@@ -27,7 +27,7 @@ class SongsController < ApplicationController
 
   def update
     @song = Song.find(params[:id])
-    
+    @song.note_contents = []
     @song.update(song_params)
 
     if @song.save
